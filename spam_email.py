@@ -47,7 +47,6 @@ def main_email(sender, password, files):
     msg['To'] = email_to
     msg['Subject'] = email_subject
     msg.attach(MIMEText(email_text, 'plain'))
-
     try:
         server = smtplib.SMTP_SSL('smtp.rambler.ru', 465)
         server.login(sender, password)
